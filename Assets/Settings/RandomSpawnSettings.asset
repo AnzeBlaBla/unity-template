@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57b0b4852752ce4cb27b9636843ea06, type: 3}
+  m_Name: RandomSpawnSettings
+  m_EditorClassIdentifier: 
+  spawnPrefabs:
+  - {fileID: 5102108650021186425, guid: 5415b8b029605084e9d120352246b2bd, type: 3}
+  spawnDelay: 1
+  spawnBounds:
+    m_Center: {x: 0, y: 1, z: 0}
+    m_Extent: {x: 5, y: 2, z: 5}
