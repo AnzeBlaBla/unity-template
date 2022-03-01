@@ -19,10 +19,15 @@ public class UIState : State
         GameObject.Destroy(UI);
     }
 
-    protected UIBehaviour GetElement(string tag, string name)
+    protected GameObject GetElement(string tag, string name)
     {
         // Find all components with the tag UIText and find the one with the name
-        var elements = GameObject.FindGameObjectWithTag(tag).GetComponentsInChildren<UIBehaviour>();
+        var elements = GameObject.FindGameObjectsWithTag(tag);
+        if(elements == null)
+        {
+            Debug.LogError("Could not find UI element with tag " + tag);
+            return null;
+        }
         foreach (var element in elements)
         {
             if (element.name == name)

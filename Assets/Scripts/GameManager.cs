@@ -12,7 +12,7 @@ class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        AudioManager.Instance.Play("Music");
+        //AudioManager.Instance.Play("Music");
     }
 
     public void CollectCoin()

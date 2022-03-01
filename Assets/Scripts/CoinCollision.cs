@@ -9,6 +9,7 @@ public class CoinCollision : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            AudioManager.Instance.Play("CoinCollected");
             GameManager.Instance.CollectCoin();
             Destroy(this.gameObject);
         }

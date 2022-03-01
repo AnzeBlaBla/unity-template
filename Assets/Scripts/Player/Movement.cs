@@ -15,21 +15,11 @@ public class Movement : MonoBehaviour
     //public Transform groundCheck;
     //public float groundCheckRadius = 0.1f;
     public float groundCheckDistance = 0.6f;
-    void Awake()
+    void Start()
     {
-        inputActions = new InputActions();
+        inputActions = InputController.Instance.inputActions;
         rb = GetComponent<Rigidbody>();
         inputActions.Player.Jump.performed += ctx => Jump();
-
-        
-    }
-    private void OnEnable()
-    {
-        inputActions.Enable();
-    }
-    private void OnDisable()
-    {
-        inputActions.Disable();
     }
     /* void Move(Vector2 move)
     {
@@ -37,9 +27,9 @@ public class Movement : MonoBehaviour
     } */
     void Jump()
     {
-        if(!IsGrounded())
+        if (!IsGrounded())
             return;
-        
+
         //Debug.Log("Jump");
 
         AudioManager.Instance.Play("Jump");

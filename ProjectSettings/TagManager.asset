@@ -7,6 +7,8 @@ TagManager:
   - UIText
   - UIButton
   - Coin
+  - UIImage
+  - UIContainer
   layers:
   - Default
   - TransparentFX

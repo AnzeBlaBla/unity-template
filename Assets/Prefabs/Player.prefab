@@ -105,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4568807725092409017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.66, z: 0}
+  m_LocalPosition: {x: 0, y: -0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8436811693592990933}
@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 7524539573796159044}
   - component: {fileID: 8436811693592990935}
   - component: {fileID: 1136051471}
-  - component: {fileID: 1136051472}
   - component: {fileID: 1136051475}
   m_Layer: 0
   m_Name: Player
@@ -206,38 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 125
   jumpForce: 500
-  groundCheck: {fileID: 654845199201480604}
-  groundCheckRadius: 0.15
---- !u!114 &1136051472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8436811693592990928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 27aba37d3a32b3e4d977803b1f993d30, type: 3}
-  m_NotificationBehavior: 3
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  groundCheckDistance: 0.6
 --- !u!114 &1136051475
 MonoBehaviour:
   m_ObjectHideFlags: 0
