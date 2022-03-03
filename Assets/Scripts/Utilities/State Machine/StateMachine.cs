@@ -15,6 +15,7 @@ public class StateMachine
         var newState = currentState.Update();
         if (newState != currentState)
         {
+            //Debug.Log("State changed from " + currentState.GetType().Name + " to " + newState.GetType().Name);
             SetState(newState);
         }
     }
@@ -22,6 +23,7 @@ public class StateMachine
 
     public virtual void SetState(State state)
     {
+        //Debug.Log("Setting state to " + state.GetType().Name);
         if (currentState != null)
         {
             StateExit(currentState);

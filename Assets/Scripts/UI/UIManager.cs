@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
-    public UISettings uiSettings;
-    private StateMachine uiStateMachine;
+    public UIState startingState = new MainMenuState();
+
+    public UIStateMachine uiStateMachine;
+
     private void Awake()
     {
-        uiStateMachine = new StateMachine(uiSettings.startingState);
+        uiStateMachine = new UIStateMachine(startingState);
     }
 
     private void Update()

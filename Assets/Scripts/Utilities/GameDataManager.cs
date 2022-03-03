@@ -8,7 +8,7 @@ static class GameDataManager
     private static void SaveGameData(string fileName, string data)
     {
         string path = Application.persistentDataPath + "/" + fileName;
-        Debug.Log("Saving data to " + path);
+        //Debug.Log("Saving data to " + path);
         File.WriteAllText(path, data);
     }
     private static string LoadGameData(string fileName)

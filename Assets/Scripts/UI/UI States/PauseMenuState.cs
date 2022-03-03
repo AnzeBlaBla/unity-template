@@ -11,8 +11,11 @@ public sealed class PauseMenuState : UIState
         GameObjectRegistry.Instance.player.GetComponent<Movement>().enabled = false;
         AudioManager.Instance.Pause("Music");
 
-        GameObject continueButton = GetElement("UIButton", "ContinueButton");
-        GameObject instructions = GetElement("UIText", "Instructions");
+        GetElement("SettingsButton").GetComponent<Button>().onClick.AddListener(() => Settings());
+        GetElement("MainMenuButton").GetComponent<Button>().onClick.AddListener(() => MainMenu());
+
+        GameObject continueButton = GetElement("ContinueButton");
+        GameObject instructions = GetElement("Instructions");
 
 #if UNITY_ANDROID || UNITY_IOS
         string newText = "";
@@ -32,6 +35,17 @@ public sealed class PauseMenuState : UIState
         instructions.GetComponent<Text>().text = newText;
     }
 
+    void Settings()
+    {
+        Debug.Log("Settings");
+        UIManager.Instance.uiStateMachine.SetState(new SettingsState());
+    }
+    void MainMenu()
+    {
+        Debug.Log("Main Menu - TODO with scene management");
+        //UIManager.Instance.uiStateMachine.SetState(new MainMenuState());
+    }
+
     public override void onExit()
     {
         base.onExit();
@@ -44,6 +58,7 @@ public sealed class PauseMenuState : UIState
     {
         if (InputController.Instance.inputActions.UI.Pause.WasPerformedThisFrame())
         {
+            Debug.Log("Pause was performed");
             return new HUDState();
         }
         return base.Update();

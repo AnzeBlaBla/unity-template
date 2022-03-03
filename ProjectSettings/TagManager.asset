@@ -5,10 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - UIText
-  - UIButton
   - Coin
-  - UIImage
-  - UIContainer
+  - UIElement
   layers:
   - Default
   - TransparentFX

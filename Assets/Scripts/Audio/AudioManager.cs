@@ -8,44 +8,46 @@ using System;
 public class AudioManager : Singleton<AudioManager>
 {
     public Sound[] sounds;
-    public ExposedAudioGroup[] exposedGroups;
-
     void Awake()
     {
         foreach (Sound s in sounds)
         {
-            s.source = MakeAudioSource(s);
+            s.source = MakeAudioSource(s).GetComponent<AudioSource>();
         }
     }
-    AudioSource MakeAudioSource(Sound sound, GameObject on = null)
+    GameObject MakeAudioSource(Sound sound, Vector3 position = default(Vector3))
     {
-        AudioSource source;
-        if (on == null)
-        {
-            source = gameObject.AddComponent<AudioSource>();
-        }
-        else
-        {
-            source = on.AddComponent<AudioSource>();
-        }
+        GameObject go = new GameObject("AudioSource");
+        go.transform.SetParent(transform);
+        go.transform.position = position;
+        AudioSource source = go.AddComponent<AudioSource>();
         source.clip = sound.clip;
         source.volume = sound.volume;
         source.pitch = sound.pitch;
         source.loop = sound.loop;
         source.mute = sound.mute;
+
         source.spatialBlend = sound.spatialize;
         source.minDistance = sound.distanceMin;
         source.maxDistance = sound.distanceMax;
-        return source;
+
+        source.outputAudioMixerGroup = sound.group.group;
+        return go;
     }
 
+    IEnumerator DestroyAfterPlay(GameObject go)
+    {
+        yield return new WaitForSeconds(go.GetComponent<AudioSource>().clip.length);
+        Destroy(go);
+    }
     public void Play(string name, GameObject playOn)
     {
-        // Copy the sound and make a new one
         Sound sound = FindSoundByName(name);
 
-        AudioSource newSource = MakeAudioSource(sound, playOn);
-        newSource.Play();
+        GameObject newGo = MakeAudioSource(sound, playOn.transform.position);
+        newGo.GetComponent<AudioSource>().Play();
+        if(!sound.loop)
+            StartCoroutine(DestroyAfterPlay(newGo));
     }
 
     public void Play(string name)

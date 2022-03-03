@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.Users;
 public enum DeviceType { MouseAndKeyboard, Gamepad }
 class InputController : Singleton<InputController>
 {
+    [HideInInspector]
     public DeviceType deviceType;
 
     [HideInInspector]

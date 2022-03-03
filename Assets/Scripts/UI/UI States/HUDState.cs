@@ -9,9 +9,9 @@ public sealed class HUDState : UIState
     {
         base.onEnter();
 
-        scoreText = GetElement("UIText", "ScoreText").GetComponent<Text>();
+        scoreText = GetElement("ScoreText").GetComponent<Text>();
 
-        GameObject mobileContainer = GetElement("UIContainer", "MobileControls");
+        GameObject mobileContainer = GetElement("MobileControls");
 
 #if UNITY_ANDROID || UNITY_IOS
         mobileContainer.SetActive(true);
@@ -19,12 +19,6 @@ public sealed class HUDState : UIState
         mobileContainer.SetActive(false);
 #endif
 
-    }
-
-    public override void onExit()
-    {
-        base.onExit();
-        Debug.Log("Exiting HUDState");
     }
 
     public override State Update()
