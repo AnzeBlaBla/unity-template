@@ -10,6 +10,21 @@ public sealed class MainMenuState : UIState
         GetElement("PlayButton").GetComponent<Button>().onClick.AddListener(() => Play());
         GetElement("SettingsButton").GetComponent<Button>().onClick.AddListener(() => Settings());
         GetElement("QuitButton").GetComponent<Button>().onClick.AddListener(() => Quit());
+
+        GetElement("TestButton").GetComponent<Button>().onClick.AddListener(() => Test());
+    }
+    void Test()
+    {
+        UIManager.Instance.ShowModal(
+            "Test",
+            "This is a test",
+            "Yes",
+            "No",
+            "Maybe",
+            () => Debug.Log("Yes"),
+            () => Debug.Log("No"),
+            () => Debug.Log("Maybe")
+            );
     }
 
     void Play()
