@@ -2,7 +2,7 @@ using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
 
-// TODO: encrypt data before saving and decrypt data after loading
+// TODO: maybe encrypt data before saving and decrypt data after loading
 static class GameDataManager
 {
     private static void SaveGameData(string fileName, string data)

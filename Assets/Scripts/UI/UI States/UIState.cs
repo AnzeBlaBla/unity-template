@@ -19,7 +19,7 @@ public class UIState : State
         uiTemplate = Resources.Load("UI/" + this.GetType().Name) as GameObject;
 
         UI = GameObject.Instantiate(uiTemplate);
-        SceneManager.MoveGameObjectToScene(UI, SceneManager.GetSceneByName("UI"));
+        SceneManager.MoveGameObjectToScene(UI, SceneManager.GetSceneByName("UI")); // TODO: there could be a better solution
     }
 
     public override void onExit()

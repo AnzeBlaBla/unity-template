@@ -15,10 +15,10 @@ public sealed class MainMenuState : UIState
     void Play()
     {
         // TODO: this shouldnt be done here
-        UIManager.Instance.uiStateMachine.SetState(new HUDState());
-        SceneManager.UnloadSceneAsync("MainMenuBackground");
-        SceneManager.LoadScene("MainScene", LoadSceneMode.Additive);
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainScene"));
+        //UIManager.Instance.uiStateMachine.SetState(new HUDState());
+        //SceneManager.UnloadSceneAsync("MainMenuBackground");
+        //SceneManager.LoadScene("MainScene", LoadSceneMode.Additive);
+        SceneLoader.Instance.LoadScene(SceneLoader.SceneEnum.MainScene, new HUDState());
     }
     void Settings()
     {
