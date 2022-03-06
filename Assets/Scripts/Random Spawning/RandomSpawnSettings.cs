@@ -5,6 +5,6 @@ public class RandomSpawnSettings : ScriptableObject
 {
     public GameObject[] spawnPrefabs;
     public float spawnDelay = 1.0f;
-    public Bounds spawnBounds;    
+    public Bounds spawnBounds; 
 
 }

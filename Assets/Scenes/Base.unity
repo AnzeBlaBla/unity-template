@@ -241,10 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075a02b7f3b3fe24392eb450309a8eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingMenuScene: LoadingMenu
-  initSceneNames:
-  - UI
-  - MainMenuBackground
+  initScenes: 0100000004000000
+  baseScenes: 0000000001000000
+  totalLoadingProgress: 0
 --- !u!4 &807323247
 Transform:
   m_ObjectHideFlags: 0
@@ -292,6 +291,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4776050f4cb43f948815e070b0c20c9a, type: 2}
   - {fileID: 11400000, guid: eaa373e91d3467a4ebf96ea3a93287f3, type: 2}
   - {fileID: 11400000, guid: c908da58296e03a409590b45be500c63, type: 2}
+  - {fileID: 11400000, guid: 7e91b2689761a1d47a2c37592dd93f25, type: 2}
 --- !u!4 &1518020301
 Transform:
   m_ObjectHideFlags: 0

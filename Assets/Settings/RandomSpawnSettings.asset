@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPrefabs:
   - {fileID: 5102108650021186425, guid: 5415b8b029605084e9d120352246b2bd, type: 3}
+  - {fileID: 4402979111812622047, guid: cb314dbd356beec4b834843fa4daa862, type: 3}
   spawnDelay: 1
   spawnBounds:
     m_Center: {x: 0, y: 1, z: 0}
-    m_Extent: {x: 5, y: 2, z: 5}
+    m_Extent: {x: 10, y: 2, z: 10}

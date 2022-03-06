@@ -7,6 +7,7 @@ TagManager:
   - UIText
   - Coin
   - UIElement
+  - Barrel
   layers:
   - Default
   - TransparentFX
