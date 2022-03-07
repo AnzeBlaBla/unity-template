@@ -11,13 +11,14 @@ public class BarrelManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Destroy(this.gameObject);
             AudioManager.Instance.Play("BarrelBreak");
             for (int i = 0; i < spawnCoins; i++)
             {
                 GameObject coinClone = Instantiate(coin, transform.position, Quaternion.identity);
-                coinClone.AddComponent<Rigidbody>().AddForce(Random.insideUnitSphere * 10, ForceMode.Impulse);
+                coinClone.GetComponent<CoinManager>().RandomDirectionBoost();
             }
-            Destroy(this.gameObject);     
         }
     }
+    
 }

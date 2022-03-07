@@ -11,7 +11,7 @@ public sealed class MainMenuState : UIState
         GetElement("SettingsButton").GetComponent<Button>().onClick.AddListener(() => Settings());
         GetElement("QuitButton").GetComponent<Button>().onClick.AddListener(() => Quit());
 
-        GetElement("TestButton").GetComponent<Button>().onClick.AddListener(() => Test());
+        //GetElement("TestButton").GetComponent<Button>().onClick.AddListener(() => Test());
     }
     void Test()
     {

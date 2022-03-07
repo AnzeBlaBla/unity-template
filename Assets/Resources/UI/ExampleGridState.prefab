@@ -1346,8 +1346,8 @@ MonoBehaviour:
   m_ChildAlignment: 0
   alignment: 0
   fitType: 4
-  columns: 4
-  rows: 3
+  columns: 2
+  rows: 5
   spacing: {x: 0, y: 0}
   cellSize: {x: 479.99997, y: 351.07324}
   fitX: 0

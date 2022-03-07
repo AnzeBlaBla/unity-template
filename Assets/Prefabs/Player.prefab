@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 878489163}
   - component: {fileID: 878489166}
   - component: {fileID: 878489165}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654845199201480604}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 8436811693592990935}
   - component: {fileID: 1136051471}
   - component: {fileID: 1136051475}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -218,7 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5040a5ca3b0c749850cf7734903a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deviceType: 0
   lerpSpeed: 10
 --- !u!1 &8436811694773255171
 GameObject:
@@ -231,7 +230,7 @@ GameObject:
   - component: {fileID: 8436811694773255174}
   - component: {fileID: 8436811694773255175}
   - component: {fileID: 8436811694773255168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
